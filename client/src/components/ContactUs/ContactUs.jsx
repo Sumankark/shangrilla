@@ -65,16 +65,14 @@ const ContactUs = () => {
             theme: "colored",
             transition: Zoom,
           });
-
-          // Optionally, you can show an error message here
         }
       );
   };
 
   return (
-    <div className="m-[30px] mt-[100px]">
+    <div className="mt-[100px]">
       <ToastContainer />
-      <h1 className="text-4xl text-[#0094FF] font-bold text-center">
+      <h1 className="text-4xl text-[#000000] font-bold text-center mb-[40px]">
         <img
           src="./contact.png"
           alt="favicon"
@@ -83,66 +81,80 @@ const ContactUs = () => {
         Contact Us
       </h1>
 
-      <div className="max-w-lg mx-auto p-[40px] bg-gray-100 rounded-[50px] shadow-md mb-[70px] m-[30px]">
-        <form className="space-y-4 mb-6" onSubmit={handleSubmit}>
-          <div>
-            <label className="block text-sm font-medium">Name:</label>
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="mt-1 block w-full p-3 border border-gray-300 rounded shadow-sm"
-            />
-          </div>
-          <div>
-            <label className="inline-block align-middle text-l font-medium mr-[20px] ">
-              Email:
-            </label>
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="example@gmail.com"
-              value={formData.email}
-              onChange={handleChange}
-              className="mt-1 block w-full p-3 border border-gray-300 rounded shadow-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Phone:</label>
-            <input
-              type="number"
-              name="number"
-              required
-              placeholder="XXXXXXXXXX"
-              value={formData.number}
-              onChange={handleChange}
-              className="mt-1 block w-full p-3 border border-gray-300 rounded shadow-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Message:</label>
-            <textarea
-              name="message"
-              required
-              placeholder="Write a message here..."
-              value={formData.message}
-              onChange={handleChange}
-              className="mt-1 block w-full p-4 h-36 border border-gray-300 rounded shadow-sm"
-            />
-          </div>
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              className="bg-[#0094FF] text-white p-3 rounded-xl items-center w-[200px] hover:bg-blue-700 transition"
-            >
-              Send
-            </button>
-          </div>
-        </form>
+      {/* Main div with proper height and flex distribution */}
+      <div className="flex justify-between lg:w-[1040px] h-auto mx-auto p-[40px] bg-gray-100 rounded-[50px] shadow-md mb-[70px] ">
+        {/* Image section */}
+        <div className="md:w-[48%] md:h-[450px] lg:flex items-center hidden">
+          <img
+            src="./call.jpg" // Replace with actual image path
+            alt="Call Us"
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+
+
+        {/* Form section */}
+        <div className="lg:w-[48%] w-full">
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <div>
+              <label className="block text-sm font-medium">Name:</label>
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="mt-1 block w-full p-3 border border-gray-300 rounded shadow-sm"
+              />
+            </div>
+            <div>
+              <label className="inline-block align-middle text-l font-medium mr-[20px] ">
+                Email:
+              </label>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="example@gmail.com"
+                value={formData.email}
+                onChange={handleChange}
+                className="mt-1 block w-full p-3 border border-gray-300 rounded shadow-sm"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Phone:</label>
+              <input
+                type="number"
+                name="number"
+                required
+                placeholder="XXXXXXXXXX"
+                value={formData.number}
+                onChange={handleChange}
+                className="mt-1 block w-full p-3 border border-gray-300 rounded shadow-sm"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Message:</label>
+              <textarea
+                name="message"
+                required
+                placeholder="Write a message here..."
+                value={formData.message}
+                onChange={handleChange}
+                className="mt-1 block w-full p-4 h-36 border border-gray-300 rounded shadow-sm"
+              />
+            </div>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="bg-[#0094FF] text-white p-3 rounded-xl items-center w-[200px] hover:bg-blue-700 transition"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
       <Footer />
     </div>
