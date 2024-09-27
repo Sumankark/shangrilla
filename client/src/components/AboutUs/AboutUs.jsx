@@ -4,106 +4,60 @@ import Footer from "../Footer/Footer";
 const AboutUs = () => {
   const sections = [
     {
-      title: "Vision",
+      title: "Everest Community Learning Center (ECLC)",
       content:
-        "ECLC is steadfast in its commitment to uplifting marginalized communities, particularly focusing on women’s empowerment and addressing the needs of low-literate individuals.",
-      logo: "./ln.png",
+        "The Everest Community Learning Centre (ECLC), located in Thulung, DudhKoshi, Nepal, has been a key institution for non-formal education and community development since its inception in 2002. Officially recognized by the Ministry of Education, ECLC plays a crucial role in enhancing educational quality and fostering community growth, aligning with national goals. Through its innovative educational initiatives, the center empowers local communities, particularly focusing on girls, women, and marginalized groups. This study is part of the UNESCO CapED program, which aims to improve educational planning and management capacities across governance levels.",
+      image: "./11.jpg", // Replace with your actual image path
     },
     {
-      title: "Mission",
+      title: "Background",
       content:
-        "ECLC’s mission is to foster literacy and financial independence by providing opportunities for individuals to acquire livelihood skills in their native languages, promoting sustainable development.",
-      logo: "./hh.png",
+        "The Government of Nepal is committed to achieving the Sustainable Development Goals, particularly Goal 4, which focuses on inclusive quality education. The new School Sector Development Plan emphasizes non-formal education to meet the diverse needs of underserved communities. The Capacity Development for Education (CapED) program collaborates with the Ministry of Education to enhance educational quality for marginalized groups by transforming Community Learning Centers (CLCs) into lifelong learning hubs. The Everest Community Learning Center (ECLC) also aims to provide tailored education and resources, leveraging technology and community involvement. As ECLC evolves, it will adapt to the changing educational landscape, ensuring it meets community needs and aligns with national goals.",
+      image: "./22.jpg", // Replace with your actual image path
+    },
+    {
+      title: "Future Plans",
+      content:
+        "ECLC plans to implement programs focused on income generation and skill-based training, with a special emphasis on extending literacy opportunities to women and disadvantaged groups. The center aims to enhance infrastructure and advance information and communication technology (ICT), as well as improve library facilities and establish information centers for community learning. Feedback from CLC facilitators indicates a strong demand for training in income generation, skill development, ICT, resource mobilization, proposal writing, and management and accounting skills, highlighting their desire to enhance their capabilities and better serve the community.",
+      image: "./33.jpg", // Replace with your actual image path
     },
   ];
 
   return (
     <div className="mt-[100px]">
       <div>
-        <h1 className="text-4xl text-[#0094FF] mt-4 mb-4 text-center font-bold">
+        <h1 className="text-4xl text-[#000000] mt-4 mb-4 text-center font-bold">
           About Us
         </h1>
 
+        {/* Container for all sections */}
         <div
-          className="item-center mx-[10px] md:mx-[60px] lg:mx-[100px] p-[30px] md:p-[50px] text-white rounded-[50px] mt-10"
-          style={{ background: "#38ABFF" }}
+          className="flex flex-wrap mx-[50px] md:mx-[100px] lg:mx-[200px]"
         >
-          <h2 className="text-3xl md:text-[25px] lg:text-[36px] font-bold text-center">
-            Everest Community Learning Center (ECLC)
-          </h2>
-          <p className="text-[12px] md:text-[15px] lg:text-[17px] mt-4">
-            The Government of Nepal is dedicated to the Sustainable Development
-            Goals, especially Goal 4, which promotes inclusive, quality
-            education and lifelong learning. The new School Sector Development
-            Plan highlights the need for non-formal education to address diverse
-            community needs, particularly through skill development for
-            underserved groups. The Capacity Development for Education (CapED)
-            program partners with the Ministry of Education to improve
-            educational quality and opportunities for marginalized populations,
-            focusing on community learning centers (CLCs) as resource hubs. A
-            recent survey of CLCs provided crucial baseline data for future
-            assessments. Similarly, the Everest Community Learning Center (ECLC)
-            aims to enhance local education by using technology and community
-            involvement, ensuring inclusivity and alignment with national
-            educational goals.
-          </p>
-        </div>
-      </div>
-
-      <div className="vision-mission md:px-[40px] lg:px-[80px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-10">
           {sections.map((section, index) => (
-            <div key={index} className="border p-6 rounded-lg">
-              <div className="flex gap-4">
+            <div
+              key={index}
+              className={`flex rounded-lg shadow-lg bg-gray-100 my-1 p-6 ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}           >
+              <div className="w-[30%] ">
                 <img
-                  src={section.logo}
+                  src={section.image}
                   alt={section.title}
-                  className="w-[40px] h-[40px] object-cover"
+                  className="w-full h-[250px] object-cover rounded-t-lg"
                 />
-                <h2 className="font-bold text-xl text-[#0094FF]">
+              </div>
+              <div className="p-4 w-[70%]">
+                <h2 className="text-xl font-bold text-center mb-4">
                   {section.title}
                 </h2>
+                <p className="text-[14px] text-left">{section.content}</p>
               </div>
-              <p className="mt-4 text-[12px] md:text-[15px] lg:text-[17px] ">
-                {section.content}
-              </p>
             </div>
           ))}
         </div>
       </div>
 
-      <div
-        className="item-center mx-[10px] md:mx-[60px] lg:mx-[100px] p-[10px] md:p-[20px] lg:p-[30px] text-white rounded-[50px] px-[10px] md:px-[30px] lg:px-[50px]"
-        style={{ background: "#38ABFF" }}
-      >
-        <div className="full px-[30px] items-center">
-          <h3 className="text-3xl font-bold text-center my-5 pb-1">
-            Aims and Objectives
-          </h3>
-          <div className="text-[12px] md:text-[15px] lg:text-[17px] pb-3">
-            <p>
-              The Everest Community Learning System (ECLS) is committed to
-              several key objectives aimed at fostering community development
-              and empowerment:
-            </p>
-            <ul className="list-disc ml-5">
-              <li>Promoting Literacy and Lifelong Learning</li>
-              <li>Preserving Indigenous Knowledge</li>
-              <li>Raising Social Awareness</li>
-              <li>Addressing Local Challenges</li>
-              <li>Promoting Gender Equality</li>
-              <li>Enhancing Socio-economic Development</li>
-              <li>Facilitating Social Empowerment</li>
-              <li>Creating Discussion Forums</li>
-            </ul>
-            <p>
-              Overall, the Everest Community Learning System aspires to be a
-              catalyst for sustainable community development, lifelong
-              education, and social transformation.
-            </p>
-          </div>
-        </div>
-      </div>
       <Footer />
     </div>
   );
