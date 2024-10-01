@@ -3,83 +3,77 @@ import OurServices from "./OurServices";
 import OurGoals from "./OurGoals";
 import Volunteering from "./Volunteering";
 import Footer from "../Footer/Footer";
-import {
-  IoIosArrowBack,
-  IoIosArrowForward,
-  IoIosArrowDown,
-} from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Gallery from "../Gallery/Gallery";
-
-const carouselImages = [
-  {
-    url: "https://img.freepik.com/free-photo/team-teamwork-collaboration-corporate-concept_53876-15857.jpg?t=st=1727404830~exp=1727408430~hmac=20cdb052d0e6076932c0469a4f44ff93d22c65ea668831eda0512ff11046214d&w=1480",
-    title: "Welcome to Everest Community",
-    description: "Empowering communities through education and growth.",
-  },
-  {
-    url: "https://img.freepik.com/premium-photo/dirty-park-positive-male-volunteer-grinning-camera-while-collecting-litter_259150-30536.jpg?ga=GA1.1.1226311596.1727329106&semt=ais_hybrid",
-    title: "Join Our Volunteering Program",
-    description: "Become a part of a community-driven initiative.",
-  },
-  {
-    url: "https://miro.medium.com/v2/resize:fit:996/1*nIBxNrv7S80jMOUoen9FSw.png",
-    title: "Our Goal: Sustainability",
-    description: "Fostering sustainable growth through education.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const Main = () => {
+  const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const carouselImages = [
+    {
+      url: "https://img.freepik.com/free-photo/team-teamwork-collaboration-corporate-concept_53876-15857.jpg?t=st=1727404830~exp=1727408430~hmac=20cdb052d0e6076932c0469a4f44ff93d22c65ea668831eda0512ff11046214d&w=1480",
+      title: t("main.carousel.welcome_title"),
+      description: t("main.carousel.welcome_description"),
+    },
+    {
+      url: "https://img.freepik.com/premium-photo/dirty-park-positive-male-volunteer-grinning-camera-while-collecting-litter_259150-30536.jpg?ga=GA1.1.1226311596.1727329106&semt=ais_hybrid",
+      title: t("main.carousel.volunteering_title"),
+      description: t("main.carousel.volunteering_description"),
+    },
+    {
+      url: "https://miro.medium.com/v2/resize:fit:996/1*nIBxNrv7S80jMOUoen9FSw.png",
+      title: t("main.carousel.goals_title"),
+      description: t("main.carousel.goals_description"),
+    },
+  ];
+
+  const totalSlides = carouselImages.length;
 
   // Auto-scroll effect using useEffect
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
-    }, 7000); // Slide changes every 7 seconds
+    const interval = setInterval(nextSlide, 7000); // Slide changes every 7 seconds
 
-    return () => clearInterval(interval); // Clean up the interval on unmount
+    return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
   };
 
   const prevSlide = () => {
-    setCurrentSlide(
-      (prevSlide) =>
-        (prevSlide - 1 + carouselImages.length) % carouselImages.length
-    );
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
   };
 
   const goToSlide = (index) => {
-    setCurrentSlide(index);
+    setCurrentSlide(index % totalSlides); // Ensure index is within bounds
   };
 
   return (
     <div>
       {/* Carousel Implementation */}
-      <div className="relative w-full h-96 md:h-[500px] lg:h-[600px]">
-        <div className="overflow-hidden relative w-full h-full">
-          {/* Carousel images */}
+      <div className="relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden">
+        {/* Parallax images */}
+        <div cla>
           {carouselImages.map((image, index) => (
             <div
               key={index}
-              className={`absolute transition-opacity duration-1000 w-full h-full ${
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
+              className="absolute w-full h-full transition-transform duration-1000 ease-in-out"
+              style={{
+                transform: `translateX(${100 * (index - currentSlide)}%)`,
+                backgroundImage: `url(${image.url})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              aria-hidden={index !== currentSlide}
             >
-              <img
-                src={image.url}
-                alt={`slide-${index}`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
               {/* Content on top of the image */}
-              <div className="mt-10 absolute top-0 left-0 w-full h-full bg-black/50 flex flex-col justify-center items-center text-center text-white/50 px-4 transition-opacity duration-1000">
-                <h2 className="text-xl md:text-3xl lg:text-5xl font-bold transition-transform duration-1000 transform">
+              <div className="pt-10 absolute top-0 left-0 w-full h-full bg-black/50 flex flex-col justify-center items-center text-center text-white px-4">
+                <h2 className="text-xl md:text-3xl lg:text-5xl font-bold">
                   {image.title}
                 </h2>
-                <p className="text-sm md:text-lg lg:text-xl mt-2 transition-opacity duration-1000">
+                <p className="text-sm md:text-lg lg:text-xl mt-2">
                   {image.description}
                 </p>
               </div>
@@ -112,19 +106,20 @@ const Main = () => {
               className={`w-2 h-2 rounded-full cursor-pointer ${
                 index === currentSlide ? "bg-white" : "bg-gray-400"
               }`}
+              aria-label={`Slide ${index + 1}`}
             ></div>
           ))}
         </div>
       </div>
 
-      <div id="our-goals">
+      <div id="our-goals" className="shadow">
         <OurGoals />
       </div>
 
-      <div>
-        {" "}
+      <div className="bg-gray-100">
         <Gallery />
       </div>
+
       <div id="our-services">
         <OurServices />
       </div>

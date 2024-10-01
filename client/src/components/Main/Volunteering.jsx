@@ -1,41 +1,40 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Volunteering = () => {
+  const { t } = useTranslation();
+
   const services = [
     {
       image:
         "https://glumac.com/wp-content/uploads/2016/03/AshlandYouthCenterComplex_Lnd_150dpi_web-1.jpg",
-      title: "Library Volunteering",
-      description:
-        "Assist in managing our library, providing resources and support for educational and personal development.",
+      title: t("volunteering.types.t1_title"),
+      description: t("volunteering.types.t1_description"),
     },
     {
       image:
         "https://cdnsm5-ss10.sharpschool.com/userfiles/servers/server_18854385/image/departments/children's%20center/img_1210.jpg",
-      title: "Children's Center Volunteering",
-      description:
-        "Engage with children aged 5 to 8, organizing fun learning activities and helping them explore their creativity.",
+      title: t("volunteering.types.t2_title"),
+      description: t("volunteering.types.t2_description"),
     },
     {
       image:
         "https://cdn.prod.website-files.com/604a97c70aee09eed25ce991/61897a35583a9b51db018d3e_MartinPublicSeating-97560-Importance-School-Library-blogbanner1.jpg",
-      title: "General Administration Volunteering",
-      description:
-        "Support the operational aspects of the centre, including planning and customer service, ensuring a smooth experience for visitors.",
+      title: t("volunteering.types.t3_title"),
+      description: t("volunteering.types.t3_description"),
     },
     {
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx8iC49YqWPDHm7VrHIsLgaNor6btnDwwaLA&s",
-      title: "Computer Lab Volunteering",
-      description:
-        "Teach essential computer skills to community members, particularly women and youth, using our equipped computer lab.",
+      title: t("volunteering.types.t4_title"),
+      description: t("volunteering.types.t4_description"),
     },
   ];
 
   return (
-    <div className="relative w-full flex flex-col items-center">
-      <h1 className="text-4xl font-medium text-center mb-7 mt-5">
-        Volunteering Opportunities
+    <div className="relative w-full flex flex-col items-center py-12 pb-20 bg-white">
+      <h1 className="text-4xl font-medium text-center mb-7 mt-5 uppercase">
+        {t("volunteering.title")}
         <img
           src="./ul.png"
           alt="underline decoration"

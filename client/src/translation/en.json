@@ -1,0 +1,142 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Our Services",
+    "goals": "Our Goals",
+    "volunteering": "Volunteering",
+    "about": "About Us",
+    "contact": "Contact Us"
+  },
+  "main": {
+    "gallery": "Our Gallery",
+    "carousel": {
+      "welcome_title": "Welcome to Everest Community Learning Center",
+      "welcome_description": "Empowering communities through education and growth.",
+      "volunteering_title": "Join Our Volunteering Program",
+      "volunteering_description": "Become a part of a community-driven initiative.",
+      "goals_title": "Our Goal: Sustainability",
+      "goals_description": "Fostering sustainable growth through education."
+    }
+  },
+  "goals": {
+    "description": "“To build a vibrant, diverse learning community that empowers individuals through accessible education”",
+    "title": "AIM and Objectives",
+    "aims": {
+      "aims_t1": "Promoting Literacy and Lifelong Learning",
+      "aims_t2": "Preserving Indigenous Knowledge",
+      "aims_t3": "Raising Social Awareness",
+      "aims_t4": "Addressing Local Challenges",
+      "aims_t5": "Promoting Gender Equality",
+      "aims_t6": "Enhancing Socio-economic Development",
+      "aims_t7": "Facilitating Social Empowerment",
+      "aims_t8": "Creating Discussion Forums",
+      "aims_d1": "ECLC collaborates with various non-governmental organizations (NGOs) to expand its outreach and leverage additional resources. These partnerships enable ECLC to tap into the expertise and funding opportunities that NGOs provide, enhancing program delivery and community engagement.",
+      "aims_d2": "ECLC works closely with government bodies, including the Ministry of Education, to ensure that its initiatives align with national educational standards and development goals. This collaboration facilitates access to governmental resources and support, which is essential for implementing effective educational programs.",
+      "aims_d3": "ECLC participates in multi-stakeholder platforms that bring together diverse entities—including businesses, NGOs, and government representatives—to address shared challenges. These initiatives foster collective action and resource sharing, amplifying the impact of ECLC's programs.",
+      "aims_d4": "Through partnerships with educational institutions and NGOs, ECLC engages in capacity-building efforts aimed at training educators and community leaders. This not only enhances local expertise but also ensures sustainability by empowering individuals within the community.",
+      "aims_d5": "ECLC collaborates with various non-governmental organizations (NGOs) to expand its outreach and leverage additional resources. These partnerships enable ECLC to tap into the expertise and funding opportunities that NGOs provide, enhancing program delivery and community engagement.",
+      "aims_d6": "ECLC works closely with government bodies, including the Ministry of Education, to ensure that its initiatives align with national educational standards and development goals. This collaboration facilitates access to governmental resources and support, which is essential for implementing effective educational programs.",
+      "aims_d7": "ECLC participates in multi-stakeholder platforms that bring together diverse entities—including businesses, NGOs, and government representatives—to address shared challenges. These initiatives foster collective action and resource sharing, amplifying the impact of ECLC's programs.",
+      "aims_d8": "Through partnerships with educational institutions and NGOs, ECLC engages in capacity-building efforts aimed at training educators and community leaders. This not only enhances local expertise but also ensures sustainability by empowering individuals within the community."
+    }
+  },
+  "services": {
+    "more": "Learn More",
+    "i1": {
+      "title": "Educational Services",
+      "description": "Educational services enhance literacy, support early childhood growth, and promote lifelong learning, strengthening the community's educational foundation.",
+      "details": {
+        "d1_title": "Literacy Programs",
+        "d1_content": "Classes designed to improve reading and writing skills among community members focus on enhancing literacy, which is essential for personal and professional development. These programs cater to individuals of all ages and backgrounds, providing tailored instruction that helps participants develop fundamental language skills, from basic reading comprehension to advanced writing techniques. By improving literacy, these classes empower community members to access better education and employment opportunities, engage more fully in civic activities, and enhance their overall quality of life, contributing to the growth and well-being of the entire community.",
+        "d2_title": "Early Childhood Development Programs",
+        "d2_content": "Initiatives focused on promoting the growth and learning of young children are designed to support their cognitive, emotional, and physical development during critical early years. These programs provide a nurturing environment where children can engage in age-appropriate educational activities that foster curiosity, creativity, and social skills. Through structured learning, play, and interaction with peers and caregivers, these initiatives lay the foundation for future academic success and personal development, ensuring that young children are equipped with the skills and confidence they need to thrive as they grow.",
+        "d3_title": "Library Services",
+        "d3_content": "Access to books, newspapers, and other reading materials plays a crucial role in fostering a culture of learning by providing community members with the resources they need to expand their knowledge and understanding of the world. Libraries and similar services offer a wide range of reading materials that cater to diverse interests and educational needs, encouraging individuals of all ages to engage in reading for both personal enjoyment and academic growth. By making these materials readily available, these programs promote lifelong learning, literacy, and intellectual curiosity, ultimately strengthening the educational foundation of the community."
+      }
+    },
+    "i2": {
+      "title": "Skill Development and Economic Empowerment",
+      "description": "Skill development programs empower individuals with job skills and financial management, fostering economic independence and community growth.",
+      "details": {
+        "d1_title": "Income Generation Activities",
+        "d1_content": "Training in various skills such as tailoring, agriculture, animal husbandry, and information and communication technology (ICT) is essential for empowering individuals economically by equipping them with the practical abilities needed to secure stable employment or start their own businesses. These skill development programs are tailored to meet the specific needs of the community, addressing local economic opportunities and challenges. By fostering expertise in diverse areas, participants gain the confidence and knowledge necessary to enhance their livelihoods, contribute to their families' well-being, and stimulate economic growth within their communities.",
+        "d2_title": "Skill Development Workshops",
+        "d2_content": "ITraining sessions covering trades relevant to the local economy are designed to equip community members with the specific skills needed to thrive in their regional job markets. These programs focus on hands-on learning and practical applications, ensuring participants gain valuable experience in fields such as construction, carpentry, plumbing, hospitality, and more. By aligning training with the demands of the local economy, these sessions help individuals improve their employability, create career pathways, and support the overall economic development of the community.",
+        "d3_title": "Savings and Credit Services",
+        "d3_content": "Financial services aimed at helping community members manage their finances effectively provide essential support for individuals and families to achieve financial stability and independence. These services often include budgeting assistance, savings programs, credit counseling, and access to affordable loans, enabling participants to make informed financial decisions. By offering education and resources tailored to the unique needs of the community, these programs empower individuals to develop sound financial habits, plan for the future, and navigate economic challenges. Ultimately, this fosters a more financially literate community."
+      }
+    },
+    "i3": {
+      "title": "Health and Social Awareness",
+      "description": "Health and social awareness programs promote hygiene, gender equality, and environmental sustainability, enhancing community well-being and inclusivity.",
+      "details": {
+        "d1_title": "Health and Sanitation Initiatives",
+        "d1_content": "Awareness programs promoting health practices and sanitation within the community are designed to educate individuals about the importance of maintaining good health and hygiene. These initiatives typically include workshops, seminars, and outreach activities that cover essential topics such as disease prevention, proper sanitation techniques, nutrition, and the importance of regular health check-ups. By raising awareness and providing practical guidance, these programs empower community members to adopt healthier lifestyles and practices, ultimately leading to improved public health outcomes.",
+        "d2_title": "Gender Rights Advocacy",
+        "d2_content": "Engaging in raising awareness about gender equality and addressing discrimination issues is crucial for fostering a more equitable society. These initiatives often involve educational campaigns, workshops, and community discussions aimed at highlighting the importance of gender equality and the harmful effects of discrimination. By promoting understanding and dialogue, these programs empower individuals to challenge stereotypes, advocate for equal rights, and support those affected by discrimination. This engagement not only helps to create a more inclusive community but also encourages collective action towards systemic change regardless of gender, has the opportunity to thrive and contribute meaningfully to society.",
+        "d3_title": "Environmental Awareness Programs",
+        "d3_content": "Educating the community about environmental conservation and sustainable practices is essential for fostering a collective commitment to protecting natural resources and promoting ecological health. These educational initiatives often include workshops, informational campaigns, and hands-on activities that raise awareness about topics such as recycling, waste management, energy conservation, and biodiversity preservation. By equipping community members with knowledge and practical skills, these programs empower individuals to make informed decisions and adopt sustainable behaviors in their daily lives."
+      }
+    },
+    "i4": {
+      "title": "Community Engagement",
+      "description": "Community engagement involves discussion forums that empower residents and awareness campaigns that educate on key issues. Together, they create an informed community that drives positive change.",
+      "details": {
+        "d1_title": "Discussion Forums",
+        "d1_content": "Platforms for community members to engage in discussions about local issues and development needs play a vital role in fostering community engagement and collaboration. These forums can take various forms, such as town hall meetings, online discussion groups, or community workshops, where individuals can voice their concerns, share ideas, and propose solutions related to pressing local challenges. By facilitating open dialogue, these platforms empower residents to actively participate in the decision-making process, ensuring that diverse perspectives are heard and considered.",
+        "d2_title": "Awareness Campaigns",
+        "d2_content": "Programs focused on educating the community about health issues, environmental sustainability, and social justice are essential for fostering informed and engaged citizens. These initiatives provide comprehensive information and resources that address critical topics such as disease prevention, access to healthcare, environmental protection, and the importance of equity and inclusion. By raising awareness and promoting understanding of these interconnected issues, these programs empower individuals to advocate for their rights and the rights of others while encouraging proactive behaviors that contribute to personal and community well-being."
+      }
+    },
+    "back": "Back"
+  },
+  "volunteering": {
+    "title": "Volunteering Opportunities",
+    "types": {
+      "t1_title": "Library Volunteering",
+      "t1_description": "Assist in managing our library, providing resources and support for educational and personal development.",
+      "t2_title": "Children's Center Volunteering",
+      "t2_description": "Engage with children aged 5 to 8, organizing fun learning activities and helping them explore their creativity.",
+      "t3_title": "Computer Lab Volunteer",
+      "t3_description": "Support the operational aspects of the centre, including planning and customer service, ensuring a smooth experience for visitors.",
+      "t4_title": "General Administration Volunteer",
+      "t4_description": "Teach essential computer skills to community members, particularly women and youth, using our equipped computer lab."
+    }
+  },
+  "about_us": {
+    "section": {
+      "section_t1": "Everest Community Learning Center (ECLC)",
+      "section_c1": "The Everest Community Learning Centre (ECLC), located in Thulung, DudhKoshi, Nepal, has been a key institution for non-formal education and community development since its inception in 2002. Officially recognized by the Ministry of Education, ECLC plays a crucial role in enhancing educational quality and fostering community growth, aligning with national goals. Through its innovative educational initiatives, the center empowers local communities, particularly focusing on girls, women, and marginalized groups. This study is part of the UNESCO CapED program, which aims to improve educational planning and management capacities across governance levels.",
+      "section_t2": "BACKGROUND",
+      "section_c2": "The Government of Nepal is committed to achieving the Sustainable Development Goals, particularly Goal 4, which focuses on inclusive quality education. The new School Sector Development Plan emphasizes non-formal education to meet the diverse needs of underserved communities. The Capacity Development for Education (CapED) program collaborates with the Ministry of Education to enhance educational quality for marginalized groups by transforming Community Learning Centers (CLCs) into lifelong learning hubs. The Everest Community Learning Center (ECLC) also aims to provide tailored education and resources, leveraging technology and community involvement. As ECLC evolves, it will adapt to the changing educational landscape, ensuring it meets community needs and aligns with national goals.",
+      "section_t3": "FUTURE PLANS",
+      "section_c3": "ECLC plans to implement programs focused on income generation and skill-based training, with a special emphasis on extending literacy opportunities to women and disadvantaged groups. The center aims to enhance infrastructure and advance information and communication technology (ICT), as well as improve library facilities and establish information centers for community learning. Feedback from CLC facilitators indicates a strong demand for training in income generation, skill development, ICT, resource mobilization, proposal writing, and management and accounting skills, highlighting their desire to enhance their capabilities and better serve the community."
+    }
+  },
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "placeholder": {
+      "name": "Full Name",
+      "message": "Write a Message here..."
+    },
+    "send": "Send"
+  },
+  "footer": {
+    "about": "Founded on BS 2080/03/07, Everest Community Learning Centre (ECLC) is an enduring institution focused on educational excellence and holistic community development.",
+    "address": {
+      "title": "Our Address",
+      "content1": "Thulung DudhKoshi,",
+      "content2": "Rural Municipality wards",
+      "content3": "04, 05, and 09, Nepal"
+    },
+    "contact": {
+      "title": "Contact",
+      "content1": "Email: ",
+      "content2": "Phone No.: "
+    },
+    "copyright": "© 2024 Everest Community Learning Center"
+  }
+}

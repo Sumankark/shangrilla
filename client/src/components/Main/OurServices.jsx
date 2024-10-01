@@ -1,43 +1,116 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 const OurServices = () => {
+  const { t } = useTranslation();
+
   const services = [
     {
       image:
         "https://images.pexels.com/photos/8389780/pexels-photo-8389780.jpeg?auto=compress&cs=tinysrgb&w=800",
-      title: "Educational Services",
-      description:
-        "Educational services enhance literacy, support early childhood growth, and promote lifelong learning, strengthening the community's educational foundation.",
+      title: t("services.i1.title"),
+      description: t("services.i1.description"),
+      details: [
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d4-ec0f58f14cc5d79e94a168b6afb790aa/views/imgpsh_fullsize_anim",
+          title: t("services.i1.details.d1_title"),
+          content: t("services.i1.details.d1_content"),
+        },
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d6-08d510e49046af8d00db8f47a0fa2e81/views/imgpsh_fullsize_anim",
+          title: t("services.i1.details.d2_title"),
+          content: t("services.i1.details.d2_content"),
+        },
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d2-9aa9a4b6e40e1d10f2a7bd1425aa9601/views/imgpsh_fullsize_anim",
+          title: t("services.i1.details.d3_title"),
+          content: t("services.i1.details.d3_content"),
+        },
+      ],
     },
     {
       image:
         "https://images.pexels.com/photos/3205570/pexels-photo-3205570.jpeg?auto=compress&cs=tinysrgb&w=800",
-      title: "Skill Development and Economic Empowerment",
-      description:
-        "Skill development programs empower individuals with job skills and financial management, fostering economic independence and community growth.",
+      title: t("services.i2.title"),
+      description: t("services.i2.description"),
+      details: [
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d10-80712866a5262a543e156172e51d8f5e/views/imgpsh_fullsize_anim",
+          title: t("services.i2.details.d1_title"),
+          content: t("services.i2.details.d1_content"),
+        },
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d8-6b57ed8bd824bd5abda2b5b3b4003a5f/views/imgpsh_fullsize_anim",
+          title: t("services.i2.details.d2_title"),
+          content: t("services.i2.details.d2_content"),
+        },
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d5-d20d400a93b77f25edaf5e07ae2de0f1/views/imgpsh_fullsize_anim",
+          title: t("services.i2.details.d3_title"),
+          content: t("services.i2.details.d3_content"),
+        },
+      ],
     },
     {
       image:
         "https://images.pexels.com/photos/6257075/pexels-photo-6257075.jpeg?auto=compress&cs=tinysrgb&w=800",
-      title: "Health and Social Awareness",
-      description:
-        "Health and social awareness programs promote hygiene, gender equality, and environmental sustainability, enhancing community well-being and inclusivity.",
+      title: t("services.i3.title"),
+      description: t("services.i3.description"),
+      details: [
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d5-08c1f4034180de251479bca4239a0c43/views/imgpsh_fullsize_anim",
+          title: t("services.i3.details.d1_title"),
+          content: t("services.i3.details.d1_content"),
+        },
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d9-83f74032e3aed894fd763ab908e40260/views/imgpsh_fullsize_anim",
+          title: t("services.i3.details.d2_title"),
+          content: t("services.i3.details.d2_content"),
+        },
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d3-f55af15ff5d1b8bff63830989e3bce76/views/imgpsh_fullsize_anim",
+          title: t("services.i3.details.d3_title"),
+          content: t("services.i3.details.d3_content"),
+        },
+      ],
     },
     {
       image:
         "https://images.pexels.com/photos/2561628/pexels-photo-2561628.jpeg?auto=compress&cs=tinysrgb&w=800",
-      title: "Community Engagement",
-      description:
-        "Community engagement involves discussion forums that empower residents and awareness campaigns that educate on key issues. Together, they create an informed community that drives positive change.",
+      title: t("services.i4.title"),
+      description: t("services.i4.description"),
+      details: [
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d5-07b8fe0579d5111f80e962e74c9c509f/views/imgpsh_fullsize_anim",
+          title: t("services.i4.details.d1_title"),
+          content: t("services.i4.details.d1_content"),
+        },
+        {
+          image:
+            "https://api.asm.skype.com/v1/objects/0-jhb-d11-c215b39525ab1d72de1e893ece12cbf9/views/imgpsh_fullsize_anim",
+          title: t("services.i3.details.d2_title"),
+          content: t("services.i4.details.d2_content"),
+        },
+      ],
     },
   ];
 
   return (
-    <div className="w-full flex flex-col items-center">
-      <h1 className="relative text-4xl font-medium text-center mb-7 mt-5">
-        OUR SERVICES
+    <div className="w-full flex flex-col items-center bg-white py-12 border-2">
+      <h1 className="relative text-4xl font-medium text-center mb-7 mt-5 uppercase">
+        {t("navbar.services")}
         <img
           src="./ul.png"
           alt="underline decoration"
@@ -70,9 +143,10 @@ const OurServices = () => {
               </p>
               <Link
                 to={`/services/${i}`}
-                className="ml-[110px]  text-[14px] flex items-center mt-2 text-blue-500 hover:underline"
+                state={{ service: item }} // Pass the service data
+                className="ml-[110px] text-[14px] flex items-center mt-2 text-blue-500 hover:underline"
               >
-                Learn More <IoIosArrowForward className="ml-1" />
+                {t("services.more")} <IoIosArrowForward className="ml-1" />
               </Link>
             </div>
           </div>

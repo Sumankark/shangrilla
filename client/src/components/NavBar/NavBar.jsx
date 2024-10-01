@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { MdClose, MdMenu } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const [mobileNav, setMobileNav] = useState(false);
@@ -10,9 +12,9 @@ const NavBar = () => {
   const [lastScrollPos, setLastScrollPos] = useState(0);
 
   const links = [
-    { title: "Our Goals", link: "/#our-goals" },
-    { title: "Our Services", link: "/#our-services" },
-    { title: "Volunteering", link: "/#volunteering" },
+    { title: t("navbar.goals"), link: "/#our-goals" },
+    { title: t("navbar.services"), link: "/#our-services" },
+    { title: t("navbar.volunteering"), link: "/#volunteering" },
   ];
 
   const handleLinkClick = (e) => {
@@ -32,10 +34,8 @@ const NavBar = () => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       if (currentScrollPos > lastScrollPos) {
-        // User is scrolling down, hide navbar
         setShowNavBar(false);
       } else {
-        // User is scrolling up, show navbar
         setShowNavBar(true);
       }
       setLastScrollPos(currentScrollPos);
@@ -57,7 +57,7 @@ const NavBar = () => {
     >
       <div>
         <NavLink to="/" aria-label="Home">
-          <img src="./logo.png" alt="logo" className="h-10 md:h-11 lg:h-16" />
+          <img src="/logo.png" alt="logo" className="h-10 md:h-11 lg:h-16" />
         </NavLink>
       </div>
 
@@ -68,7 +68,7 @@ const NavBar = () => {
             className="text-gray-700 hover:text-blue-500 md:text-md lg:text-lg"
             onClick={() => navigate("/")}
           >
-            Home
+            {t("navbar.home")}
           </NavLink>
         ) : (
           links.map((item, i) => (
@@ -87,14 +87,14 @@ const NavBar = () => {
           className="text-gray-700 hover:text-blue-500 md:text-md lg:text-lg"
           onClick={() => navigate("/about-us")}
         >
-          About Us
+          {t("navbar.about")}
         </NavLink>
         <NavLink to="/contact-us">
           <button
             className="bg-blue-600 text-white rounded-3xl px-4 py-2 hover:bg-blue-700 transition duration-300 md:text-md lg:text-lg"
             onClick={() => navigate("/contact-us")}
           >
-            Contact Us
+            {t("navbar.contact")}
           </button>
         </NavLink>
       </div>
@@ -121,7 +121,7 @@ const NavBar = () => {
                   setMobileNav(false);
                 }}
               >
-                Home
+                {t("navbar.home")}
               </NavLink>
             ) : (
               links.map((item, i) => (
@@ -143,7 +143,7 @@ const NavBar = () => {
                 setMobileNav(false);
               }}
             >
-              About Us
+              {t("navbar.about")}
             </NavLink>
             <NavLink to="/contact-us">
               <button
@@ -153,7 +153,7 @@ const NavBar = () => {
                   setMobileNav(false);
                 }}
               >
-                Contact Us
+                {t("navbar.contact")}
               </button>
             </NavLink>
           </ul>

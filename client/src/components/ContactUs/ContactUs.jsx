@@ -3,8 +3,11 @@ import emailjs from "emailjs-com";
 import Footer from "../Footer/Footer";
 import { toast, ToastContainer, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -78,31 +81,23 @@ const ContactUs = () => {
           alt="favicon"
           className="inline-block w-[40px] h-[40px] mr-3"
         />
-        Contact Us
+        {t("navbar.contact")}
       </h1>
 
       {/* Main div with proper height and flex distribution */}
-      <div className="flex justify-between lg:w-[1040px] h-auto mx-auto p-[40px] bg-gray-100 rounded-[50px] shadow-md mb-[70px] ">
-        {/* Image section */}
-        <div className="md:w-[48%] md:h-[450px] lg:flex items-center hidden">
-          <img
-            src="./call.jpg" // Replace with actual image path
-            alt="Call Us"
-            className="w-full h-full object-cover rounded-lg"
-          />
-        </div>
-
-
+      <div className="flex justify-between lg:mx-[400px] md:mx-[200]  h-auto mx-auto p-[40px] bg-gray-100 rounded-[50px] shadow-md mb-[70px] ">
         {/* Form section */}
-        <div className="lg:w-[48%] w-full">
+        <div className=" w-full ">
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
-              <label className="block text-sm font-medium">Name:</label>
+              <label className="block text-sm font-medium">
+                {t("contact.name")}
+              </label>
               <input
                 type="text"
                 name="name"
                 required
-                placeholder="Full Name"
+                placeholder={t("contact.placeholder.name")}
                 value={formData.name}
                 onChange={handleChange}
                 className="mt-1 block w-full p-3 border border-gray-300 rounded shadow-sm"
@@ -110,7 +105,7 @@ const ContactUs = () => {
             </div>
             <div>
               <label className="inline-block align-middle text-l font-medium mr-[20px] ">
-                Email:
+                {t("contact.email")}
               </label>
               <input
                 type="email"
@@ -123,7 +118,9 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium">Phone:</label>
+              <label className="block text-sm font-medium">
+                {t("contact.phone")}
+              </label>
               <input
                 type="number"
                 name="number"
@@ -135,11 +132,13 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium">Message:</label>
+              <label className="block text-sm font-medium">
+                {t("contact.message")}
+              </label>
               <textarea
                 name="message"
                 required
-                placeholder="Write a message here..."
+                placeholder={t("contact.placeholder.message")}
                 value={formData.message}
                 onChange={handleChange}
                 className="mt-1 block w-full p-4 h-36 border border-gray-300 rounded shadow-sm"
@@ -150,7 +149,7 @@ const ContactUs = () => {
                 type="submit"
                 className="bg-[#0094FF] text-white p-3 rounded-xl items-center w-[200px] hover:bg-blue-700 transition"
               >
-                Send
+                {t("contact.send")}
               </button>
             </div>
           </form>
