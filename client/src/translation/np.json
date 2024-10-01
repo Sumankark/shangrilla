@@ -116,6 +116,7 @@
   },
   "contact": {
     "name": "नाम: ",
+    "address": "ठेगाना",
     "email": "ई-मेल: ",
     "phone": "फोन: ",
     "message": "सन्देश",
