@@ -55,7 +55,7 @@ const Main = () => {
       {/* Carousel Implementation */}
       <div className="relative w-full h-96 md:h-[500px] lg:h-[600px] overflow-hidden">
         {/* Parallax images */}
-        <div cla>
+        <div className="static">
           {carouselImages.map((image, index) => (
             <div
               key={index}
